@@ -13,7 +13,7 @@ import os
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Grocery Subscription Churn Predictor",
+    page_title="Retail Subscription Analytics",
     page_icon="🛒",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -38,9 +38,9 @@ fi       = payload["fi"]
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/3724/3724788.png", width=60)
-    st.title("Churn Predictor")
-    st.caption("Grocery Subscription · German Market")
+    st.image(...)
+    st.title("Retail Subscription Analytics")
+    st.caption("Decision Support for Online Grocery Retail · German Market")
     st.divider()
     st.markdown(f"""
     **Model info**  
@@ -58,16 +58,16 @@ with st.sidebar:
 
 # ── Main tabs ─────────────────────────────────────────────────────────────────
 tab1, tab2, tab3 = st.tabs([
-    "🔍 Churn Predictor",
-    "🎛️ Retention Simulator",
-    "📊 Model Insights"
+    "🔍 Churn Prediction",
+    "🎛️ Retention Strategy Simulator",
+    "📊 Retail Analytics Insights"
 ])
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 1 — Churn Predictor
 # ═══════════════════════════════════════════════════════════════════════════════
 with tab1:
-    st.header("Predict Subscription Churn Risk")
+    st.header("Subscription Churn Prediction")
     st.caption("Enter a customer's profile to predict their churn likelihood")
 
     col_left, col_right = st.columns(2, gap="large")
