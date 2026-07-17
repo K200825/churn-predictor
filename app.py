@@ -25,8 +25,8 @@ MODEL_PATH = "model/churn_model.pkl"
 @st.cache_resource
 def load_model():
     if not os.path.exists(MODEL_PATH):
-        st.error("Model not found. Run `python train_model.py` first.")
-        st.stop()
+        import train_model
+        train_model.train()
     with open(MODEL_PATH, "rb") as f:
         return pickle.load(f)
 
